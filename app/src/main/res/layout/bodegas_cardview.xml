@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    card_view:cardElevation="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:contentPadding="5dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgBodegaLista"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/foto_bodega"
+            tools:ignore="VectorDrawableCompat">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/c_txtRucRazonSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Razon Social"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/c_txtIDBodega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/c_txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Direccion"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/c_txtDistrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distrito"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/seleccionar"
+            tools:ignore="VectorDrawableCompat"
+            android:id="@+id/btnVerProductos">
+        </ImageButton>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

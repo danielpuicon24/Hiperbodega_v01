@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ListadoProductosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnFechaBusqueda"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Distrito" />
+
+            <Spinner
+                android:id="@+id/spDsitritoBusqueda"
+                style="@style/EditText.Flat.Grey"
+                android:layout_width="169dp"
+                android:layout_height="match_parent"
+
+                android:text=""
+
+                />
+
+            <Button
+                android:id="@+id/btnFiltrar"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:background="@drawable/btn_rect_primary"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Filtrar" />
+
+
+
+        </LinearLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/srlBodega">
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bodegaRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:paddingTop="5dp"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/bodegas_cardview" />
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

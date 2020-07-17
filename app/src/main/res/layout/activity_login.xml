@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2d2d2d"
+    tools:context=".ActivityLogin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/background_login"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:background="#502d2d2d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/c_txtDni"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/estilo_caja_texto_01"
+                android:drawableLeft="@drawable/ic_user_black"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="DNI"
+                android:inputType="number"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/c_txtPassword"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/estilo_caja_texto_01"
+                android:drawableLeft="@drawable/ic_contrasena_black"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/login_chkRecordar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="65dp"
+                android:buttonTint="#ffffff"
+                android:text="Recordar datos"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginLeft="65dp" />
+
+            <Button
+                android:elevation="10dp"
+                android:id="@+id/btn_iniciar_sesion"
+                android:layout_margin="16dp"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:text="Iniciar Sesión"
+                android:background="@drawable/estilo_boton_01"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/fab_android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_android_white"
+            android:focusable="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
